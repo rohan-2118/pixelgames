@@ -1,0 +1,21 @@
+{
+  "name": "pixelgames",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node scripts/prerender.js && node scripts/generate-seo.js",
+    "preview": "vite preview",
+    "prerender": "node scripts/prerender.js",
+    "seo": "node scripts/generate-seo.js",
+    "deploy": "npm run build && npx wrangler pages deploy dist --project-name=pixelgame"
+  },
+  "devDependencies": {
+    "vite": "^8.3.0"
+  },
+  "dependencies": {
+    "@trystero-p2p/torrent": "^0.25.4",
+    "trystero": "^0.25.4"
+  }
+}

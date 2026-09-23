@@ -1,0 +1,1 @@
+function e(e){try{return structuredClone(e)}catch{return JSON.parse(JSON.stringify(e))}}function t(t,n={}){return{kind:`state`,state:t.state?e(t.state):null,mySeat:t.mySeat,...n}}function n(t,n){return!n||n.kind!==`state`||!n.state?!1:(t.state=e(n.state),n.mySeat!=null&&(t.mySeat=n.mySeat),!0)}export{n as applyStateSnapshot,e as cloneState,t as snapshotFromState};
